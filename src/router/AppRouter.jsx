@@ -8,28 +8,78 @@ import Carrito from "../pages/Carrito/Carrito";
 import Checkout from "../pages/Checkout/Checkout";
 import Contacto from "../pages/Contacto/Contacto";
 import NotFound from "../pages/NotFound/NotFound";
+import Layout from "../components/layout/Layout/Layout";
 
 function AppRouter() {
     return (
         <BrowserRouter>
             <Routes>
 
-                <Route path="/" element={<Home />} />
+                <Route
+                    path="/"
+                    element={
+                        <Layout>
+                            <Home />
+                        </Layout>
+                    }
+                />
             
-                <Route path="/nosotros" element={<Nosotros />} />
+                <Route
+                    path="/nosotros"
+                    element={
+                        <Layout>
+                            <Nosotros />
+                        </Layout>
+                    }
+                />
             
-                <Route path="/productos" element={<Productos />} />
+                <Route
+                    path="/productos"
+                    element={
+                        <Layout>
+                            <Productos />
+                        </Layout>
+                    }
+                />
             
-                <Route path="/ofertas" element={<Ofertas />} />
+                <Route
+                    path="/ofertas"
+                    element={
+                        <Layout>
+                            <Ofertas />
+                        </Layout>
+                    }
+                />
             
-                <Route path="/carrito" element={<Carrito />} />
+                <Route
+                    path="/carrito"
+                    element={
+                        <Layout>
+                            <Carrito />
+                        </Layout>
+                    }
+                />
             
-                <Route path="/checkout" element={<Checkout />} />
+                <Route
+                    path="/checkout"
+                    element={
+                        <Layout>
+                            <Checkout />
+                        </Layout>
+                    }
+                />
             
-                <Route path="/contacto" element={<Contacto />} />
+                <Route
+                    path="/contacto"
+                    element={
+                        <Layout>
+                            <Contacto />
+                        </Layout>
+                    }
+                />
             
                 <Route path="*" element={<NotFound />} />
-
+                
             </Routes>
         </BrowserRouter>
     );
