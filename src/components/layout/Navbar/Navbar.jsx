@@ -1,57 +1,46 @@
-import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-    const location = useLocation();
-
-    const enlaces = [
-        { name: "Inicio", path: "/" },
-        { name: "Nosotros", path: "/nosotros" },
-        { name: "Productos", path: "/productos" },
-        { name: "Ofertas", path: "/ofertas" },
-        { name: "Contacto", path: "/contacto" },
-    ];
+    const [menuAbierto, setMenuAbierto] = useState(false);
 
     return (
-        <header className="bg-[#C6676D]/95 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
-            <div className="max-w-7xl mx-auto flex justify-between items-center px-6 sm:px-8 py-4">
+        <nav className="bg-[#232B32] border-b-2 border-[#F2C12E] w-full text-white relative">
+            <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
                 
-                <Link to="/" className="group flex items-center gap-2">
-                    <span className="text-2xl font-black text-white tracking-wide font-serif group-hover:text-pink-100 transition-colors">
-                        Dolce <span className="text-pink-200 group-hover:text-white">Passione</span>
-                    </span>
+                <Link to="/" className="text-[#F2C12E] font-black tracking-wider text-xl">
+                    DOLCE PASSIONE
                 </Link>
 
-                <nav className="flex items-center gap-8">
-                    <ul className="hidden md:flex gap-8 text-white font-semibold text-sm tracking-wide">
-                        {enlaces.map((enlace) => {
-                            const isActive = location.pathname === enlace.path;
-                            return (
-                                <li key={enlace.path} className="relative py-1 group">
-                                    <Link 
-                                        to={enlace.path}
-                                        className={`transition-colors duration-300 ${
-                                            isActive ? "text-pink-200" : "text-white hover:text-pink-100"
-                                        }`}
-                                    >
-                                        {enlace.name}
-                                    </Link>
-                                    <span className={`absolute bottom-0 left-0 h-[2px] bg-pink-200 transition-all duration-300 ${
-                                        isActive ? "w-full" : "w-0 group-hover:w-full"
-                                    }`}></span>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                    <Link 
-                        to="/carrito" 
-                        className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-4 py-2 rounded-xl border border-white/20 transition-all active:scale-95 shadow-sm"
-                    >
-                        <span>Carrito</span>
-                    </Link>
-                </nav>
+                <button
+                    type="button"
+                    onClick={() => setMenuAbierto(!menuAbierto)}
+                    className="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 border border-gray-600 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#F2C12E]"
+                >
+                    <span className={`block w-6 h-0.5 bg-[#F2C12E] transition-all duration-300 ${menuAbierto ? "rotate-45 translate-y-2" : ""}`}></span>
+                    <span className={`block w-6 h-0.5 bg-[#F2C12E] transition-all duration-300 ${menuAbierto ? "opacity-0" : ""}`}></span>
+                    <span className={`block w-6 h-0.5 bg-[#F2C12E] transition-all duration-300 ${menuAbierto ? "-rotate-45 -translate-y-2" : ""}`}></span>
+                </button>
 
+                <div className="hidden md:flex items-center space-x-6 font-bold text-sm uppercase tracking-wide">
+                    <Link to="/" className="hover:text-[#F2C12E] transition-colors">Inicio</Link>
+                    <Link to="/productos" className="hover:text-[#F2C12E] transition-colors">Productos</Link>
+                    <Link to="/nosotros" className="hover:text-[#F2C12E] transition-colors">Nosotros</Link>
+                    <Link to="/contacto" className="hover:text-[#F2C12E] transition-colors">Contacto</Link>
+                    <Link to="/carrito" className="hover:text-[#F2C12E] transition-colors">Carrito</Link>
+                </div>
             </div>
-        </header>
+
+            <div className={`md:hidden bg-[#232B32] border-t border-gray-700 transition-all duration-300 ${menuAbierto ? "block" : "hidden"}`}>
+                <div className="flex flex-col space-y-4 px-4 py-4 font-bold text-sm uppercase tracking-wide">
+                    <Link to="/" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors">Inicio</Link>
+                    <Link to="/productos" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors">Productos</Link>
+                    <Link to="/nosotros" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors">Nosotros</Link>
+                    <Link to="/contacto" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors">Contacto</Link>
+                    <Link to="/carrito" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors">Carrito</Link>
+                </div>
+            </div>
+        </nav>
     );
 }
 
