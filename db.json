@@ -24,7 +24,7 @@
             "nombre": "Torta de Chocolate",
             "categoria": "Tortas",
             "precio": 65,
-            "imagen": "/images/torta-chocolate.jpg",
+            "imagen": "/img/torta_chocolate.jpg",
             "descripcion": "Bizcocho de chocolate con fudge."
         },
         {
@@ -32,7 +32,7 @@
             "nombre": "Red Velvet",
             "categoria": "Tortas",
             "precio": 72,
-            "imagen": "/images/red-velvet.jpg",
+            "imagen": "/img/red_velvet.jpg",
             "descripcion": "Torta de terciopelo rojo con queso crema."
         },  
         {   
@@ -40,7 +40,7 @@
             "nombre": "Cheesecake",
             "categoria": "Postres",
             "precio": 18,
-            "imagen": "/images/cheesecake.jpg",
+            "imagen": "/img/cheesecake.jpg",
             "descripcion": "Cheesecake de fresa."
         },  
         {   
@@ -48,7 +48,7 @@
             "nombre": "Pie de Limón",
             "categoria": "Postres",
             "precio": 16,
-            "imagen": "/images/pie-limon.jpg",
+            "imagen": "/img/pie_limon.jpg",
             "descripcion": "Pie con crema de limón."
         },  
         {   
@@ -56,7 +56,7 @@
             "nombre": "Cupcake de Vainilla",
             "categoria": "Cupcakes",
             "precio": 9,
-            "imagen": "/images/cupcake-vainilla.jpg",
+            "imagen": "/img/cupcake_de_vainilla.jpg",
             "descripcion": "Cupcake con buttercream."
         },  
         {   
@@ -64,7 +64,7 @@
             "nombre": "Cupcake de Chocolate",
             "categoria": "Cupcakes",
             "precio": 10,
-            "imagen": "/images/cupcake-chocolate.jpg",
+            "imagen": "/img/cupcake_de_chocolate.jpg",
             "descripcion": "Cupcake relleno de fudge."
         },  
         {   
@@ -72,7 +72,7 @@
             "nombre": "Brownie",
             "categoria": "Postres",
             "precio": 8,
-            "imagen": "/images/brownie.jpg",
+            "imagen": "/img/brownie.jpg",
             "descripcion": "Brownie húmedo con nueces."
         },  
         {   
@@ -80,7 +80,7 @@
             "nombre": "Alfajor",
             "categoria": "Bocaditos",
             "precio": 5,
-            "imagen": "/images/alfajor.jpg",
+            "imagen": "/img/alfajor.jpg",
             "descripcion": "Alfajor relleno de manjar."
         },  
         {   
@@ -88,32 +88,8 @@
             "nombre": "Trufa",
             "categoria": "Bocaditos",
             "precio": 4,
-            "imagen": "/images/trufa.jpg",
+            "imagen": "/img/trufa.jpg",
             "descripcion": "Trufa de chocolate."
-        },  
-        {   
-            "id": 10,
-            "nombre": "Empanada de Pollo",
-            "categoria": "Bocaditos",
-            "precio": 7,
-            "imagen": "/images/empanada.jpg",
-            "descripcion": "Empanada horneada."
-        },  
-        {   
-            "id": 11,
-            "nombre": "Tres Leches",
-            "categoria": "Tortas",
-            "precio": 68,
-            "imagen": "/images/tres-leches.jpg",
-            "descripcion": "Torta húmeda de tres leches."
-        },  
-        {   
-            "id": 12,
-            "nombre": "Dona Glaseada",
-            "categoria": "Bocaditos",
-            "precio": 6,
-            "imagen": "/images/dona.jpg",
-            "descripcion": "Dona con glaseado de azúcar."
         }
     ]
 }
