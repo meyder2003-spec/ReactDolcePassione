@@ -14,7 +14,6 @@ function NotFound() {
                     ¡Ups! Postre Extraviado
                 </h2>
 
-                {/* Separador sutil */}
                 <div className="w-16 h-[2px] bg-amber-200 rounded-full mb-8"></div>
 
                 <Link
