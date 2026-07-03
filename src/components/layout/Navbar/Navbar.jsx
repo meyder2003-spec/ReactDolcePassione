@@ -25,6 +25,7 @@ function Navbar() {
                 <div className="hidden md:flex md:flex-row md:items-center md:gap-6 font-bold text-sm uppercase tracking-wide">
                     <Link to="/" className="hover:text-[#F2C12E] transition-colors">Inicio</Link>
                     <Link to="/productos" className="hover:text-[#F2C12E] transition-colors">Productos</Link>
+                    <Link to="/ofertas" className="hover:text-[#F2C12E] transition-colors text-[#F2C12E]">Ofertas</Link>
                     <Link to="/nosotros" className="hover:text-[#F2C12E] transition-colors">Nosotros</Link>
                     <Link to="/contacto" className="hover:text-[#F2C12E] transition-colors">Contacto</Link>
                     <Link to="/carrito" className="hover:text-[#F2C12E] transition-colors">Carrito</Link>
@@ -35,6 +36,7 @@ function Navbar() {
                 <div className="flex flex-col space-y-4 px-4 py-4 font-bold text-sm uppercase tracking-wide">
                     <Link to="/" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors">Inicio</Link>
                     <Link to="/productos" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors">Productos</Link>
+                    <Link to="/ofertas" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors text-[#F2C12E]">Ofertas</Link>
                     <Link to="/nosotros" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors">Nosotros</Link>
                     <Link to="/contacto" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors">Contacto</Link>
                     <Link to="/carrito" onClick={() => setMenuAbierto(false)} className="hover:text-[#F2C12E] transition-colors">Carrito</Link>

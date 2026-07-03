@@ -6,7 +6,7 @@ function ProductCard({ producto }) {
         const carrito = obtenerCarrito();
         carrito.push(producto);
         guardarCarrito(carrito);
-        alert(`${producto.nombre} fue agregado al carrito.`);839217
+        alert(`${producto.nombre} fue agregado al carrito.`);
     }
 
     return (
@@ -34,12 +34,20 @@ function ProductCard({ producto }) {
                     </p>
                 </div>
             </div>
+
             <div className="p-5 pt-0 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
                 <div className="flex flex-col">
                     <span className="text-xs text-gray-400 font-medium">Precio</span>
-                    <span className="text-xl font-extrabold text-pink-600">
-                        S/. {producto.precio.toFixed(2)}
-                    </span>
+                    <div className="flex items-baseline flex-wrap">
+                        {producto.precioAnterior && (
+                            <span className="text-xs text-gray-400 line-through mr-2 font-semibold">
+                                S/. {Number(producto.precioAnterior).toFixed(2)}
+                            </span>
+                        )}
+                        <span className="text-xl font-extrabold text-pink-600">
+                            S/. {producto.precio.toFixed(2)}
+                        </span>
+                    </div>
                 </div>
 
                 <button
