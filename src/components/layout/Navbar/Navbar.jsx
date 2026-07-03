@@ -22,7 +22,7 @@ function Navbar() {
                     <span className={`block w-6 h-0.5 bg-[#F2C12E] transition-all duration-300 ${menuAbierto ? "-rotate-45 -translate-y-2" : ""}`}></span>
                 </button>
 
-                <div className="hidden md:flex items-center space-x-6 font-bold text-sm uppercase tracking-wide">
+                <div className="hidden md:flex md:flex-row md:items-center md:gap-6 font-bold text-sm uppercase tracking-wide">
                     <Link to="/" className="hover:text-[#F2C12E] transition-colors">Inicio</Link>
                     <Link to="/productos" className="hover:text-[#F2C12E] transition-colors">Productos</Link>
                     <Link to="/nosotros" className="hover:text-[#F2C12E] transition-colors">Nosotros</Link>
