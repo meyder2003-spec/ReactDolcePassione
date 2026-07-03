@@ -85,12 +85,15 @@ function Checkout() {
                 />
 
                 <input
-                    type="text"
+                    type="tel"
                     name="telefono"
-                    placeholder="Teléfono"
-                    className="w-full border rounded-lg p-3"
+                    placeholder="Ej. 987654321"
+                    className="w-full border border-gray-300 rounded-lg p-3 bg-white text-[#232B32] focus:outline-none focus:ring-2 focus:ring-[#F2C12E] focus:border-transparent text-sm"
                     onChange={cambiar}
                     required
+                    maxLength={9}
+                    pattern="^9[0-9]{8}$"
+                    title="El número de celular debe empezar con 9 y tener exactamente 9 dígitos"
                 />
 
                 <h2 className="text-3xl font-bold">

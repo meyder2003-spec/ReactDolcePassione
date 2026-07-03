@@ -26,7 +26,6 @@ function Productos() {
 
             <header className="w-full max-w-4xl mx-auto text-center mb-16 flex flex-col items-center">
                 <div className="inline-flex items-center gap-2 bg-rose-50 border border-rose-100 rounded-full px-3 py-1 mb-6">
-                    <span className="w-2 h-2 rounded-full bg-rose-400 animate-pulse"></span>
                     <span className="text-xs font-bold text-rose-600 uppercase tracking-widest">
                         Dulces Momentos
                     </span>

@@ -6,7 +6,7 @@ function ProductCard({ producto }) {
         const carrito = obtenerCarrito();
         carrito.push(producto);
         guardarCarrito(carrito);
-        alert(`${producto.nombre} fue agregado al carrito.`);
+        alert(`${producto.nombre} fue agregado al carrito.`);839217
     }
 
     return (

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 function NotFound() {
     return (
-        <div className="w-full flex flex-col items-center justify-center py-12 sm:py-20 px-4">
-
+        <div className="w-full flex-grow flex flex-col items-center justify-center py-8 px-4 min-h-[60vh]">
+            
             <div className="max-w-md w-full bg-[#F8F9FA] rounded-2xl shadow-md border-t-[6px] border-[#F2C12E] p-8 sm:p-10 text-center flex flex-col items-center transition-all duration-300">
 
                 <h1 className="text-6xl sm:text-7xl font-black text-[#232B32] tracking-tight mb-2">
@@ -14,6 +14,7 @@ function NotFound() {
                     ¡Ups! Postre Extraviado
                 </h2>
 
+                {/* Separador sutil */}
                 <div className="w-16 h-[2px] bg-amber-200 rounded-full mb-8"></div>
 
                 <Link
